@@ -1,0 +1,41 @@
+Address Geocode - http://localhost:8091/find?address=158 Concord rd, billerica, ma 01821
+Reverse Geocode - http://localhost:8092/find?lat=-71.27765170&lng=42.54912880
+Point2Line      - http://localhost:8093/find?lng=18.5132123&lat=73.8614812
+		  http://localhost:8093/find?lng=22.5647303&lat=72.9690512
+Point-in-Polygon- http://localhost:8094/find?lng=18.52989&lat=73.83377
+Point2Point     - http://localhost:8095/find?lng=18.5132123&lat=73.8614812
+LastMile connect- http://localhost:8096/find?lng=73.87954&lat=18.53477&tlng=73.87588&tlat=18.53678
+USL Application - http://localhost:8097/
+
+Service discovery:
+http://localhost:9098/getLatLng/243%20Oakridge%20Ave,%20North%20Attleborough,%20MA%2002760,%20USA
+http://localhost:9098/getAddressLat/42.5440325/Lng/-71.2829314/
+http://localhost:9098/getLatLng/158 Concord rd, billerica, ma 01821
+
+http://184.172.247.108:31927/geoserver/web
+
+Point2Line      - http://184.172.247.108:31081/find?lng=18.5132123&lat=73.8614812
+		- http://184.172.247.108:31081/find?lng=22.5647303&lat=72.9690512
+
+73.85826, 18.53661, Sangamwadi Rd, Sangamvadi, Pune, Maharashtra 411006, India, Point2Point 
+
+ 	
+16, Late Sadhu Piraji Gaikwad Path, Lumbini Nagar, Sangamvadi, Pune, Maharashtra 411001, India
+
+
+
+73.84890, 18.51608, 343A, Namdeo Raut Path, Shaniwar Peth, Pune, Maharashtra 411030, India - EVDO Cover available here 
+
+http://localhost:8095/find?lng=18.538142597449614&lat=73.87176622636719
+
+
+http://localhost:8096/find?lng=73.87176622636719&lat=18.538142597449614&tlng=73.87366475955675&tlat=18.536241853397392
+
+http://35.202.168.79:8093/find?lng=18.5132123&lat=73.8614812
+http://35.202.75.53:8094/find?lng=18.52989&lat=73.83377
+http://34.67.31.111:8095/find?lng=18.5132123&lat=73.8614812
+
+Public IP is Node IP : Goto Cluster => Node => and get the external IP 
+http://173.193.107.21:31677/geoserver/web
+http://173.193.107.21:32578/find?address=158 Concord rd, billerica, ma 01821
+http://173.193.107.21:32380/

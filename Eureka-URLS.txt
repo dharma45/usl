@@ -1,0 +1,17 @@
+Address Geocode - http://9.85.176.87:8091/find?address=158 Concord rd, billerica, ma 01821
+Reverse Geocode - http://9.85.176.87:8092/find?lat=-71.27765170&lng=42.54912880
+Point2Line      - http://9.85.176.87:8093/find?lng=18.5132123&lat=73.8614812
+		  http://9.85.176.87:8093/find?lng=22.5647303&lat=72.9690512
+Point-in-Polygon- http://9.85.176.87:8094/find?lng=18.52989&lat=73.83377
+Point2Point     - http://9.85.176.87:8095/find?lng=18.5132123&lat=73.8614812
+LastMile connect- http://9.85.176.87:8096/find?lng=73.87954&lat=18.53477&tlng=73.87588&tlat=18.53678
+
+Dharmendra@2019
+
+Address Geocode - http://localhost:8091/find?address=158 Concord rd, billerica, ma 01821
+Reverse Geocode - http://localhost:8092/find?lat=-71.27765170&lng=42.54912880
+Point2Line      - http://localhost:8093/find?lng=18.5132123&lat=73.8614812
+		  http://localhost:8093/find?lng=22.5647303&lat=72.9690512
+Point-in-Polygon- http://localhost:8094/find?lng=18.52989&lat=73.83377
+Point2Point     - http://localhost:8095/find?lng=18.5132123&lat=73.8614812
+LastMile connect- http://localhost:8096/find?lng=73.87954&lat=18.53477&tlng=73.87588&tlat=18.53678

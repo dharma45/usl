@@ -1,0 +1,17 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: orderservice
+  #namespace: microservice
+spec:
+  replicas: 1 # tells deployment to run 2 pods matching the template
+  template: # create pods using pod definition in this template
+    metadata:
+     labels:
+      app: orderservice
+    spec:
+        containers:
+          - name: orderservice
+            image: pdas2/orderservice:latest
+            ports:
+            - containerPort: 8081

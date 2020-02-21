@@ -1,0 +1,33 @@
+// Start - 26-Mar-19 :Trying to call service from Eureka registry 
+  	//calling through service discovery - Geocoder 
+	@RequestMapping(value = "/getLatLng/{myAdd}",  method = RequestMethod.GET)
+	public String getLatLng(@PathVariable String myAdd) {
+		
+		System.out.println("Getting Lat/Lng for Address " + myAdd);
+		
+		String strGeoUrl = "http://localhost:8091/find?address=%s";
+		
+		URI discoGeoCode = null;
+		try {
+			discoGeoCode = new URI(String.format(strGeoUrl, new Object[] {
+					URLEncoder.encode(myAdd, "UTF8") }));
+		} catch (UnsupportedEncodingException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (URISyntaxException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+    	
+    	System.out.println("Full GeoCode URI: " + discoGeoCode.toString());
+      
+    	String resp = (String)rt.getForObject(discoGeoCode, String.class);
+		
+		//String strAddResp = restTemplate.exchange("http://geocoder/find?address=%s"+myAdd, HttpMethod.GET, null, new ParameterizedTypeReference<String>() {
+		//}, myAdd).getBody();
+		
+		return resp;
+	}
+  
+  // End 
+ 

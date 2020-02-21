@@ -1,0 +1,49 @@
+C:\Users\DharmendraSonawane\AppData\Local\Google\Cloud SDK>gcloud auth login
+Your browser has been opened to visit:
+
+    https://accounts.google.com/o/oauth2/auth?redirect_uri=http%3A%2F%2Flocalhost%3A8085%2F&prompt=select_account&response_type=code&client_id=32555940559.apps.googleusercontent.com&scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcloud-platform+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fappengine.admin+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcompute+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Faccounts.reauth&access_type=offline
+
+
+WARNING: `gcloud auth login` no longer writes application default credentials.
+If you need to use ADC, see:
+  gcloud auth application-default --help
+
+You are now logged in as [dharmendra.sonawane@gmail.com].
+Your current project is [zeta-envoy-98108].  You can change this setting by running:
+  $ gcloud config set project PROJECT_ID
+
+
+Updates are available for some Cloud SDK components.  To install them,
+please run:
+  $ gcloud components update
+
+
+C:\Users\DharmendraSonawane\AppData\Local\Google\Cloud SDK>
+
+c:\temp\shp>
+c:\temp\shp>gcloud config set comput/zone us-central1-a
+ERROR: (gcloud.config.set) Section "comput" does not exist.
+
+c:\temp\shp>gcloud config set compute/zone us-central1-a
+Updated property [compute/zone].
+
+
+c:\temp\shp>gcloud container clusters list
+NAME                LOCATION       MASTER_VERSION  MASTER_IP      MACHINE_TYPE   NODE_VERSION  NUM_NODES  STATUS
+standard-cluster-1  us-central1-a  1.11.8-gke.6    35.232.196.30  n1-standard-2  1.11.8-gke.6  3          RUNNING
+
+
+c:\temp\shp>gcloud container clusters get-credentials standard-cluster-1
+Fetching cluster endpoint and auth data.
+kubeconfig entry generated for standard-cluster-1.
+
+c:\temp\shp>kubectl get pods
+NAME                         READY   STATUS    RESTARTS   AGE
+geoserver-7ffb4f6d8b-mmpqh   1/1     Running   0          1d
+
+c:\temp\shp>kubectl cp . default/geoserver-7ffb4f6d8b-mmpqh:/root -c geoserver
+
+c:\temp\shp>kubectl cp . default/geoserver-6579f496fb-dxnbx:/root -c geoserver
+
+c:\Work\Tech\MicroServices\USL\pnt2line>kubectl apply -f pnt2line-deployment.yml
+

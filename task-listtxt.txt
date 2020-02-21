@@ -1,0 +1,13 @@
+Implementing Service Discovery for all services 
+Modifying the application to use the Eureka Service Discovery (usl-app)
+Configuration for the URL path, localhost and other constants 
+Adding login authentication service 
+Adding session mangement / saving the data for the session / user 
+Creating Docker images and uploading to Docker Hub 
+Checking / finding options for deploying on any cloud, how to deploy in Kubernetes 
+Deploying / configuring the GeoServer on IBM Clould and/or Google cloud along with the shape files
+Deploying the application along with services on Google cloud 
+Deploying the application along with services on IBM cloud 
+
+
+-v /var/run/docker.sock:/var/run/docker.sock -d -p 8080:8080 geonode/geoserver

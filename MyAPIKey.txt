@@ -1,0 +1,29 @@
+http://localhost:8080/geoserver/web/
+
+http://173.193.99.190:31741/geoserver/web/
+
+http://35.192.188.6:8080/geoserver/web/
+
+login from powershell and use normal command prompt for below
+ibmcloud login --sso and rest of the commands 
+
+C:\Users\DharmendraSonawane>SET KUBECONFIG=C:\Users\DharmendraSonawane\.bluemix\plugins\container-service\clusters\mycluster\kube-config-hou02-mycluster.yml
+
+C:\Users\DharmendraSonawane>kubectl get pods
+NAME                         READY     STATUS    RESTARTS   AGE
+geoserver-84b47f8d75-2jwqr   1/1       Running   0          15d
+
+C:\Users\DharmendraSonawane>cd c:\temp\shp
+
+c:\temp\shp>kubectl cp *.* default/geoserver-84b47f8d75-2jwqr:/root/myshapes -c mycluster
+Error from server (BadRequest): container mycluster is not valid for pod geoserver-84b47f8d75-2jwqr
+
+c:\temp\shp>kubectl cp *.* default/geoserver-84b47f8d75-2jwqr:/root/myshapes -c geoserver
+
+c:\temp\shp>kubectl cp . default/geoserver-84b47f8d75-2jwqr:/root/myshapes -c geoserver
+
+c:\temp\shp>SET KUBECONFIG=C:\Work\Tech\MicroServices\geoserver-7ffb4f6d8b-mmpqh.yaml
+
+kubectl cp . default/geoserver-7ffb4f6d8b-mmpqh:/root -c geoserver
+
+ Error loading config file : no kind "Pod" is registered for version "v1" in scheme "k8s.io/client-go/tools/clientcmd/api/latest/latest.go:50"
